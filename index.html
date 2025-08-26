@@ -9,22 +9,24 @@
 <body>
   <h1>PDF Plot Generation from TLO Manifest</h1>
   <section>
+    <h2>Problem:</h2>
     <p>For TLO Loading data from every wagon is already collected. However, this data is rarely used and never visualised. </p>
-    <pre>
-</code>
-    </pre>
+    
+    <section>
+      <h2>Solution:</h2>
+      <p>Leverage existing scripting in PlantSCADA and integrate a python script to auto-generate a PDF with plots of relevant train loading data. Have this emailed out to stakeholders after the cmpletion of every train  </p>
   </section>
-      <h2>Creation from PlantSCADA</h2>
+      <h3>Creation from PlantSCADA</h2>
       <p>After a train is completed a cicode function is triggered. This creates a .txt file with every wagons loading data. </p>
       <img src="SCADAEvent.png" alt="My portfolio screenshot" width="800">
 
   </section>
-      <h2>Files needed for processing and emailing</h2>
+      <h3>Files needed for processing and emailing</h2>
       <p>After the cicode creates the input txt file the executable is called. This processes the input file and outputs the pdf plots. Next, a batch file for emailing the pdf manifest to recipients is triggered. </p>
       <img src="Allfiles.png" alt="My portfolio screenshot" width="800">
 
   <section>
-    <h2>Example PDF</h2>
+    <h3>Example PDF</h2>
     <embed src="HD4 TLO Manifest - DD612 - 25-08-25.pdf" type="application/pdf" width="100%" height="2000px">
     <!-- If you want a fallback link for browsers that don't support embedding: -->
     <p>
