@@ -86,7 +86,7 @@
         Have the pdf automatically emailed out to stakeholders after the completion of every train. 
       </p>
       <p>
-        The PDF enhances oversight and helps the team identify and address operational issues. The visualisations make it easy to identify abnormal loading scenarios and detect excessive manual operations.
+        The PDF enhances oversight and helps the team detect and address operational issues. The visualisations make it easy to identify abnormal loading scenarios and excessive manual interventions.
       </p>
       <img src="ProcessFlow.png" alt="Process Flow">
     </section>
@@ -102,7 +102,7 @@
     <section>
       <h3>Files Needed for Processing and Emailing</h3>
       <p>
-        At the end of the cicode function a yython script packaged as an executable is called. This processes the latest txt file and outputs the PDF plots. Next, a batch file for emailing the PDF manifest to recipients is triggered.
+        At the end of the cicode function a python script packaged as an executable is called. This processes the latest txt file and outputs the PDF plots. Next, a batch file for emailing the PDF manifest to recipients is triggered.
       </p>
       <p>
         Next, a batch file for emailing the PDF manifest is triggered which calles blat.exe, a SMTP mailer. 
