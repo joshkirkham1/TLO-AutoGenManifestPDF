@@ -73,14 +73,14 @@
     <section>
       <h2>Problem</h2>
       <p>
-        TLO Loading data from every wagon is already collected. However, this data is rarely used and never visualised.
+        During train loading data from every wagon is already collected. At present there is limited oversight to this data and it is never visualised. This causes loading inefficiencies to occur. 
       </p>
     </section>
 
     <section>
       <h2>Solution</h2>
       <p>
-        Leverage existing scripting in PlantSCADA and integrate a Python script to auto-generate a PDF with plots of relevant train loading data. Have this emailed out to stakeholders after the completion of every train.
+        Create a python script to interpret the manifest for train loading and auto-generate a PDF with plots of relevant train loading data. Have this emailed out to stakeholders after the completion of every train.
       </p>
       <img src="ProcessFlow.png" alt="Process Flow">
     </section>
@@ -96,7 +96,7 @@
     <section>
       <h3>Files Needed for Processing and Emailing</h3>
       <p>
-        After the cicode creates the input txt file, the executable is called. This processes the input file and outputs the PDF plots. Next, a batch file for emailing the PDF manifest to recipients is triggered.
+        Python script packages as an executable is called. This processes the latest txt file and outputs the PDF plots. Next, a batch file for emailing the PDF manifest to recipients is triggered.
       </p>
       <img src="Allfiles.png" alt="File list screenshot">
     </section>
