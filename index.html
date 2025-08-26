@@ -94,7 +94,7 @@
     <section>
       <h3>Creation from PlantSCADA</h3>
       <p>
-        After a train is completed, a cicode function is triggered. This creates a .txt file with every wagon's loading data.
+        After a train is completed, an event is triggered within PlantSCADA which executes a cicode function. This creates a .txt file with every wagon's loading data.
       </p>
       <img src="SCADAEvent.png" alt="SCADA event screenshot">
     </section>
@@ -102,7 +102,13 @@
     <section>
       <h3>Files Needed for Processing and Emailing</h3>
       <p>
-        Python script packaged as an executable is called. This processes the latest txt file and outputs the PDF plots. Next, a batch file for emailing the PDF manifest to recipients is triggered.
+        At the end of the cicode function a yython script packaged as an executable is called. This processes the latest txt file and outputs the PDF plots. Next, a batch file for emailing the PDF manifest to recipients is triggered.
+      </p>
+      <p>
+        Next, a batch file for emailing the PDF manifest is triggered which calles blat.exe, a SMTP mailer. 
+      </p>
+      <p>
+        All recipients of the pdf plot are listed in a txt file, this allows the recipient list to be updated easily. 
       </p>
       <img src="Allfiles.png" alt="File list screenshot">
     </section>
@@ -111,6 +117,9 @@
       <h3>Example PDF</h3>
       <p>
         Performance summary with time/weight target metrics followed by 7 loading plots.
+      </p>
+      <p>
+        Heavy use of multi-axis plots to correlate dependant loading variables to inform decision making during abnormal situations
       </p>
       <img src="HD4 TLO Manifest - DD612 - 25-08-25.png" alt="File list screenshot">
       <p>
